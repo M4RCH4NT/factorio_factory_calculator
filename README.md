@@ -12,32 +12,34 @@ Components.json:
 
 The components.json file contains entries in the following format:
 
-"<component name>" : {
-  "default" : <default recipe name that should be used> ,
-  "<recipe name>" : }
-    "manu_type": <name of factory module type>,
-    "manu_time": <seconds it takes for a batch of components>,
-    "manu_amount": <amount of components made in a batch>,
-    "recipe": [[<name of component in recipe>, <amount of components>], [<name of component in recipe>, <amount of components>], ...]
-  },
-  "<recipe name>" : }
-    "manu_type": <name of factory module type>,
-    "manu_time": <seconds it takes for a batch of components>,
-    "manu_amount": <amount of components made in a batch>,
-    "recipe": [[<name of component in recipe>, <amount of components>], [<name of component in recipe>, <amount of components>], ...]
-  },
-  ...
+    "<component name>" : {
+      "default" : <default recipe name that should be used> ,
+      "<recipe name>" : }
+        "manu_type": <name of factory module type>,
+        "manu_time": <seconds it takes for a batch of components>,
+        "manu_amount": <amount of components made in a batch>,
+        "recipe": [[<name of component in recipe>, <amount of components>], [<name of component in recipe>, <amount of components>], ...]
+      },
+      "<recipe name>" : }
+        "manu_type": <name of factory module type>,
+        "manu_time": <seconds it takes for a batch of components>,
+        "manu_amount": <amount of components made in a batch>,
+        "recipe": [[<name of component in recipe>, <amount of components>], [<name of component in recipe>, <amount of components>], ...]
+      },
+      ...
+    }
+  
 }
-
+  
 Production.json :
 
 The production.json file contains the entries in the following format:
 
-"<factory module type>": {
-  "<factory module name>": <module manufacturing speed>,
-  "<factory module name>": <module manufacturing speed>,
-  ...
-}
+    "<factory module type>": {
+      "<factory module name>": <module manufacturing speed>,
+      "<factory module name>": <module manufacturing speed>,
+      ...
+    }
   
  Configuration:
  
