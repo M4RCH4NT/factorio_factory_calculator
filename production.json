@@ -1,0 +1,34 @@
+{
+  "assembling_machine": {
+    "assembling_machine_1": 0.5,
+    "assembling_machine_2": 0.75,
+    "assembling_machine_3": 1.25
+  },
+  "oil_refinery": {
+    "oil_refinery_1": 1.0
+  },
+  "offshore_pump": {
+    "offshore_pump_1": 1.0
+  },
+  "filtration_plant": {
+    "filtration_plant_1": 1.0
+  },
+  "geenhouse": {
+    "geenhouse_1": 1.0
+  },
+  "chemical_plant": {
+    "chemical_plant_1": 1.0
+  },
+  "crusher": {
+    "crusher_1": 1.0
+  },
+  "furnace": {
+    "stone_furnace": 1,
+    "steel_furnace": 2,
+    "electric_furnace": 2
+  },
+  "miner": {
+    "burner_drill": 0.25,
+    "electric_drill": 0.5
+  }
+}

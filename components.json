@@ -1,0 +1,552 @@
+{
+  "iron_ore": {
+    "default": "iron_ore",
+    "iron_ore": {
+      "manu_type": "miner",
+      "manu_time": 1,
+      "manu_amount": 1,
+      "recipe": [["ore", 1]]
+    }
+  },
+  "copper_ore": {
+    "default": "copper_ore",
+    "copper_ore": {
+      "manu_type": "miner",
+      "manu_time": 1,
+      "manu_amount": 1,
+      "recipe": [["ore", 1]]
+    }
+  },
+  "stone": {
+    "default": "stone",
+    "stone": {
+      "manu_type": "miner",
+      "manu_time": 1,
+      "manu_amount": 1,
+      "recipe": [["ore", 1]]
+    }
+  },
+  "crude_oil": {
+    "default": "crude_oil",
+    "crude_oil": {
+      "manu_type": "miner",
+      "manu_time": 0.5,
+      "manu_amount": 10,
+      "recipe": [["liquid", 1]]
+    }
+  },
+  "water": {
+    "default": "water",
+    "water": {
+      "manu_type": "offshore_pump",
+      "manu_time": 1,
+      "manu_amount": 1250,
+      "recipe": [["lake", 1]]
+    }
+  },
+  "coal": {
+    "default": "coal",
+    "coal": {
+      "manu_type": "miner",
+      "manu_time": 1.33,
+      "manu_amount": 1,
+      "recipe": [["ore", 1]]
+    }
+  },
+  "baseResorces": {
+    "default": "miner",
+    "baseResorces": {
+      "manu_type": "offshore_pump",
+      "manu_time": 1.33,
+      "manu_amount": 1,
+      "recipe": [["ore", 1]]
+    }
+  },
+  "automation_core": {
+    "default": "automation_core",
+    "automation_core": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 2,
+      "recipe": [
+        ["copper_plates", 6],
+        ["iron_stick", 4],
+        ["iron_gear_wheel", 4]
+      ]
+    }
+  },
+  "petroleum_gas": {
+    "default": "basic_oil_processing",
+    "basic_oil_processing": {
+      "manu_type": "oil_refinery",
+      "manu_time": 5,
+      "manu_amount": 45,
+      "recipe": [["crude_oil", 100]]
+    },
+    "advanced_oil_processing": {
+      "manu_type": "oil_refinery",
+      "manu_time": 5,
+      "manu_amount": 55,
+      "recipe": [
+        ["crude_oil", 100],
+        ["water", 50]
+      ]
+    },
+    "light_oil_cracking": {
+      "manu_type": "chemical_plant",
+      "manu_time": 2,
+      "manu_amount": 20,
+      "recipe": [
+        ["light_oil", 30],
+        ["water", 30]
+      ]
+    }
+  },
+  "light_oil": {
+    "default": "advanced_oil_processing",
+    "advanced_oil_processing": {
+      "manu_type": "oil_refinery",
+      "manu_time": 5,
+      "manu_amount": 45,
+      "recipe": [
+        ["crude_oil", 100],
+        ["water", 40]
+      ]
+    }
+  },
+  "solid_fuel": {
+    "default": "light_solid_fuel",
+    "light_solid_fuel": {
+      "manu_type": "chemical_plant",
+      "manu_time": 2,
+      "manu_amount": 1,
+      "recipe": [["light_oil", 10]]
+    },
+    "heavy_oil_solid_fuel": {
+      "manu_type": "chemical_plant",
+      "manu_time": 2,
+      "manu_amount": 1,
+      "recipe": [["heavy_oil", 20]]
+    },
+    "petroleum_gas_solid_fuel": {
+      "manu_type": "chemical_plant",
+      "manu_time": 2,
+      "manu_amount": 1,
+      "recipe": [["petroleum_gas", 20]]
+    }
+  },
+  "heavy_oil": {
+    "default": "advanced_oil_processing",
+    "advanced_oil_processing": {
+      "manu_type": "oil_refinery",
+      "manu_time": 5,
+      "manu_amount": 45,
+      "recipe": [
+        ["crude_oil", 100],
+        ["water", 40]
+      ]
+    }
+  },
+  "plastic_bar": {
+    "default": "plastic_bar",
+    "plastic_bar": {
+      "manu_type": "chemical_plant",
+      "manu_time": 2,
+      "manu_amount": 4,
+      "recipe": [
+        ["coal", 2],
+        ["petroleum_gas", 40]
+      ]
+    }
+  },
+  "sand": {
+    "default": "sand",
+    "sand": {
+      "manu_type": "crusher",
+      "manu_time": 1,
+      "manu_amount": 7.5,
+      "recipe": [["stone", 3]]
+    }
+  },
+  "copper_plates": {
+    "default": "copper_plates",
+    "copper_plates": {
+      "manu_type": "furnace",
+      "manu_time": 16,
+      "manu_amount": 5,
+      "recipe": [["copper_ore", 10]]
+    }
+  },
+  "copper_cable": {
+    "default": "copper_cable",
+    "copper_cable": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 8,
+      "recipe": [["copper_plates", 4]]
+    }
+  },
+  "iron_gear_wheel": {
+    "default": "iron_gear_wheel",
+    "iron_gear_wheel": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 4,
+      "recipe": [["iron_plate", 4]]
+    }
+  },
+  "iron_stick": {
+    "default": "iron_stick",
+    "iron_stick": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 8,
+      "recipe": [["iron_plate", 4]]
+    }
+  },
+  "iron_plate": {
+    "default": "iron_plate",
+    "iron_plate": {
+      "manu_type": "furnace",
+      "manu_time": 16,
+      "manu_amount": 5,
+      "recipe": [["iron_ore", 10]]
+    }
+  },
+  "iron_beam": {
+    "default": "iron_beam",
+    "iron_beam": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 1,
+      "recipe": [["iron_plate", 2]]
+    }
+  },
+  "electronic_circuit": {
+    "default": "electronic_circuit",
+    "electronic_circuit": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 2,
+      "recipe": [
+        ["Wood", 1],
+        ["iron_plate", 1],
+        ["copper_cable", 4]
+      ]
+    }
+  },
+  "advanced_circuit": {
+    "default": "advanced_circuit",
+    "advanced_circuit": {
+      "manu_type": "assembling_machine",
+      "manu_time": 4,
+      "manu_amount": 2,
+      "recipe": [
+        ["copper_cable", 4],
+        ["electronic_components", 2],
+        ["electronic_circuit", 4]
+      ]
+    }
+  },
+  "electronic_components": {
+    "default": "electronic_components",
+    "electronic_components": {
+      "manu_type": "assembling_machine",
+      "manu_time": 4,
+      "manu_amount": 4,
+      "recipe": [
+        ["glass", 2],
+        ["silicon", 2],
+        ["plastic_bar", 2]
+      ]
+    }
+  },
+  "silicon": {
+    "default": "silicon",
+    "silicon": {
+      "manu_type": "furnace",
+      "manu_time": 16,
+      "manu_amount": 9,
+      "recipe": [["quartz", 9]]
+    }
+  },
+  "steel_plate": {
+    "default": "steel_plate",
+    "steel_plate": {
+      "manu_type": "furnace",
+      "manu_time": 16,
+      "manu_amount": 5,
+      "recipe": [
+        ["iron_plate", 10],
+        ["coke", 2]
+      ]
+    }
+  },
+  "coke": {
+    "default": "coke",
+    "coke": {
+      "manu_type": "furnace",
+      "manu_time": 16,
+      "manu_amount": 6,
+      "recipe": [
+        ["wood", 6],
+        ["coal", 6]
+      ]
+    }
+  },
+  "quartz": {
+    "default": "quartz",
+    "quartz": {
+      "manu_type": "filtration_plant",
+      "manu_time": 2.1,
+      "manu_amount": 6,
+      "recipe": [
+        ["sand", 10],
+        ["water", 10]
+      ]
+    }
+  },
+  "glass": {
+    "default": "glass",
+    "glass": {
+      "manu_type": "furnace",
+      "manu_time": 16,
+      "manu_amount": 8,
+      "recipe": [["sand", 16]]
+    }
+  },
+  "burner_inserter": {
+    "default": "burner_inserter",
+    "burner_inserter": {
+      "manu_type": "assembling_machine",
+      "manu_time": 0.5,
+      "manu_amount": 1,
+      "recipe": [
+        ["iron_plate", 1],
+        ["inserter_parts", 1]
+      ]
+    }
+  },
+  "inserter": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 0.5,
+      "manu_amount": 1,
+      "recipe": [
+        ["inserter_parts", 1],
+        ["automation_core", 1]
+      ]
+    }
+  },
+  "wood": {
+    "default": "wood",
+    "wood": {
+      "manu_type": "geenhouse",
+      "manu_time": 60,
+      "manu_amount": 40,
+      "recipe": [["water", 200]]
+    }
+  },
+  "stone_furnace": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 0.5,
+      "manu_amount": 1,
+      "recipe": [["stone", 5]]
+    }
+  },
+  "assembling_machine_1": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 1,
+      "manu_amount": 1,
+      "recipe": [
+        ["iron_beam", 4],
+        ["iron_gear_wheel", 5],
+        ["automation_core", 2]
+      ]
+    }
+  },
+  "assembling_machine_2": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 1,
+      "recipe": [
+        ["steel_plate", 2],
+        ["electronic_circuit", 3],
+        ["iron_gear_wheel", 5],
+        ["assembling_machine_1", 1]
+      ]
+    }
+  },
+  "assembling_machine_3": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 0.5,
+      "manu_amount": 1,
+      "recipe": [["stone", 5]]
+    }
+  },
+  "burner_mining_drill": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 1,
+      "recipe": [
+        ["iron_plate", 3],
+        ["iron_gear_wheel", 3],
+        ["stone_furnace", 1]
+      ]
+    }
+  },
+  "wind_turbine": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 5,
+      "manu_amount": 1,
+      "recipe": [
+        ["iron_plate", 6],
+        ["copper_cable", 6],
+        ["iron_beam", 2],
+        ["iron_gear_wheel", 6]
+      ]
+    }
+  },
+  "boiler": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 0.5,
+      "manu_amount": 1,
+      "recipe": [
+        ["pipe", 4],
+        ["stone_furnace", 3]
+      ]
+    }
+  },
+  "pipe": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 0.5,
+      "manu_amount": 1,
+      "recipe": [["iron_plate", 1]]
+    }
+  },
+  "offshore_pump": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 0.5,
+      "manu_amount": 1,
+      "recipe": [
+        ["pipe", 1],
+        ["iron_gear_wheel", 1],
+        ["automation_core", 1]
+      ]
+    }
+  },
+  "electric_mining_drill": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 1,
+      "recipe": [
+        ["iron_beam", 2],
+        ["iron_gear_wheel", 5],
+        ["automation_core", 2]
+      ]
+    }
+  },
+  "chemical_plant": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 5,
+      "manu_amount": 1,
+      "recipe": [
+        ["steel_beam", 4],
+        ["steel_gear_wheel", 5],
+        ["automation_core", 3],
+        ["pipe", 5]
+      ]
+    }
+  },
+  "steel_beam": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 1,
+      "recipe": [["steel_plate", 2]]
+    }
+  },
+  "steel_gear_wheel": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 4,
+      "recipe": [["steel_plate", 4]]
+    }
+  },
+  "inserter_parts": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 2,
+      "manu_amount": 2,
+      "recipe": [
+        ["iron_stick", 4],
+        ["iron_gear_wheel", 4]
+      ]
+    }
+  },
+  "small_electric_pole": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 0.5,
+      "manu_amount": 1,
+      "recipe": [
+        ["wood", 1],
+        ["copper_cable", 1]
+      ]
+    }
+  },
+  "medium_electric_pole": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 5,
+      "manu_amount": 1,
+      "recipe": [
+        ["copper_cable", 4],
+        ["iron_stick", 4],
+        ["iron_beam", 2]
+      ]
+    }
+  },
+  "substation": {
+    "default": "crafting",
+    "crafting": {
+      "manu_type": "assembling_machine",
+      "manu_time": 0.5,
+      "manu_amount": 1,
+      "recipe": [
+        ["copper_cable", 16],
+        ["steel_beam", 8],
+        ["advanced_circuit", 5]
+      ]
+    }
+  }
+}
