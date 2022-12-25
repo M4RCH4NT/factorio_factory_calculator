@@ -33,8 +33,15 @@ def Calculate_Required_Manufacturing(Component, Configuration, Components, Produ
     Default_Recipe = Components[Component_Name]["default"]
 
     Manufacturing_Type = Components[Component_Name][Default_Recipe]['manu_type']
+
+
+    try:
+        temp_Production = Production[Manufacturing_Type][Configuration[Manufacturing_Type]]
+    except:
+        temp_Production = Production[Manufacturing_Type][Production[Manufacturing_Type]["default"]]
+
     Adjusted_Manu_Amount = Amount_Manu / \
-        Production[Manufacturing_Type][Configuration[Manufacturing_Type]]
+                           temp_Production
 
     Optional_Recipes = ""
 
@@ -45,11 +52,16 @@ def Calculate_Required_Manufacturing(Component, Configuration, Components, Produ
             if (Optional_Recipe != "default") and (Optional_Recipe != Default_Recipe):
                 Optional_Recipes = Optional_Recipes + "    " + Optional_Recipe + "\n"
                 Counter += 1
+    try:
+        temp_Configuration = Configuration[Manufacturing_Type]
+    except:
+        # temp_Configuration = "default"
+        temp_Configuration = Production[Manufacturing_Type]["default"]
 
     if Counter > 0:
-        Data_Label = f"Component Name: {Label} \n Used Recipe: {Default_Recipe} \n Created In: {Configuration[Manufacturing_Type]} \n Amount: {round(Adjusted_Manu_Amount*100)/100}\n Optional Recipes:\n{Optional_Recipes}"
+        Data_Label = f"Component Name: {Label} \n Used Recipe: {Default_Recipe} \n Created In: {temp_Configuration} \n Amount: {round(Adjusted_Manu_Amount*100)/100}\n Optional Recipes:\n{Optional_Recipes}"
     else:
-        Data_Label = f"Component Name: {Label} \n Used Recipe: {Default_Recipe} \n Created In: {Configuration[Manufacturing_Type]} \n Amount: {round(Adjusted_Manu_Amount*100)/100}"
+        Data_Label = f"Component Name: {Label} \n Used Recipe: {Default_Recipe} \n Created In: {temp_Configuration} \n Amount: {round(Adjusted_Manu_Amount*100)/100}"
 
     Results.append(
         {'data': {'id': Parent, 'label': Data_Label},
@@ -117,7 +129,7 @@ def Calculate_Required_Manufacturing(Component, Configuration, Components, Produ
 Component_File = "components.json"
 Production_File = "production.json"
 
-Target_Construction = "substation"
+Target_Construction = "utility_tech_card"
 Amount_Per_Second = 1
 
 Configuration = {
@@ -174,8 +186,14 @@ Results, height = Calculate_Required_Manufacturing(
 
 Label = Target_Construction
 Manufacturing_Type = Component['manu_type']
+
+try:
+    temp_Production = Production[Manufacturing_Type][Configuration[Manufacturing_Type]]
+except:
+    temp_Production = Production[Manufacturing_Type][Production[Manufacturing_Type]["default"]]
+
 Adjusted_Manu_Amount = required_manu_speed / \
-    Production[Manufacturing_Type][Configuration[Manufacturing_Type]]
+                       temp_Production
 
 Optional_Recipes = ""
 
@@ -187,10 +205,16 @@ if Configuration["show_optional_recipes"] == True:
             Optional_Recipes = Optional_Recipes + "    " + Optional_Recipe + "\n"
             Counter += 1
 
+try:
+    temp_Configuration = Configuration[Manufacturing_Type]
+
+except:
+    temp_Configuration =  Production[Manufacturing_Type]["default"]
+
 if Counter > 0:
-    Data_Label = f"Component Name: {Label} \n Used Recipe: {Default_Recipe} \n Created In: {Configuration[Manufacturing_Type]} \n Amount: {round(Adjusted_Manu_Amount*100)/100}\n Optional Recipes:\n{Optional_Recipes}"
+    Data_Label = f"Component Name: {Label} \n Used Recipe: {Default_Recipe} \n Created In: {temp_Configuration} \n Amount: {round(Adjusted_Manu_Amount*100)/100}\n Optional Recipes:\n{Optional_Recipes}"
 else:
-    Data_Label = f"Component Name: {Label} \n Used Recipe: {Default_Recipe} \n Created In: {Configuration[Manufacturing_Type]} \n Amount: {round(Adjusted_Manu_Amount*100)/100}"
+    Data_Label = f"Component Name: {Label} \n Used Recipe: {Default_Recipe} \n Created In: {temp_Configuration} \n Amount: {round(Adjusted_Manu_Amount*100)/100}"
 
 Results[0] = {'data': {'id': Target_Construction, 'label': Data_Label},
               'position': {'x': 0, 'y': (height/2)*vertical_spacing}, 'align-items': "left", 'justify-content': 'left'}
