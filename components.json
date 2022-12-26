@@ -30,8 +30,8 @@
 	"default": "crude_oil",
 	"crude_oil": {
 		"manu_type": "miner",
-		"manu_time": 0.5,
-		"manu_amount": 10,
+		"manu_time": 1,
+		"manu_amount": 2,
 		"recipe": [["liquid",1]]
 	}
 },
@@ -134,7 +134,7 @@
 "plastic_bar": {
 	"default": "plastic_bar",
 	"plastic_bar": {
-		"manu_type": "miner",
+		"manu_type": "chemical_plant",
 		"manu_time": 2,
 		"manu_amount": 4,
 		"recipe": [["coal",2],["petroleum_gas",40]]
@@ -549,6 +549,71 @@
 		"manu_time": 5,
 		"manu_amount": 30,
 		"recipe": [["air",1]]
+	}
+},
+"fast_transport_belt": {
+	"default": "crafting",
+	"crafting": {
+		"manu_type": "assembling_machine",
+		"manu_time": 0.5,
+		"manu_amount": 1,
+		"recipe": [["transport_belt",1],["iron_gear_wheel",4]]
+	}
+
+},
+"transport_belt": {
+	"default": "crafting",
+	"crafting": {
+		"manu_type": "assembling_machine",
+		"manu_time": 0.5,
+		"manu_amount": 1,
+		"recipe": [["iron_plate",1],["iron_gear_wheel",1]]
+	}
+
+},
+"production_tech_card": {
+	"default": "crafting",
+	"crafting": {
+		"manu_type": "assembling_machine",
+		"manu_time": 20,
+		"manu_amount": 5,
+		"recipe": [["production_module",5],["uranium_238",5],["fast_transport_belt",10],["blank_tech_card",10]]
+	}
+},
+"battery": {
+	"default": "crafting",
+	"crafting": {
+		"manu_type": "assembling_machine",
+		"manu_time": 4,
+		"manu_amount": 1,
+		"recipe": [["iron_plate",1],["copper_plates",1],["sulfuric_acid",20]]
+	}
+},
+"production_module": {
+	"default": "crafting",
+	"crafting": {
+		"manu_type": "assembling_machine",
+		"manu_time": 15,
+		"manu_amount": 1,
+		"recipe": [["electronic_components",10],["electronic_circuit",5]]
+	}
+},
+"uranium_238": {
+	"default": "crafting",
+	"crafting": {
+		"manu_type": "assembling_machine",
+		"manu_time": 20,
+		"manu_amount": 5,
+		"recipe": [["uranium_ore",10]]
+	}
+},
+"uranium_ore": {
+	"default": "crafting",
+	"crafting": {
+		"manu_type": "miner",
+		"manu_time": 1,
+		"manu_amount": 1,
+		"recipe": [["ore",10]]
 	}
 }
 }

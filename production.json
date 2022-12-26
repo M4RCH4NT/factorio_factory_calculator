@@ -45,7 +45,7 @@
 		"electric_furnace": 2
 	},
 	"miner": {
-		"default":"burner_drill",
+		"default":"electric_drill",
 		"burner_drill": 0.25,
 		"electric_drill": 0.5
 	},

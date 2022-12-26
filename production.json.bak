@@ -1,0 +1,56 @@
+{
+	"assembling_machine": {
+		"default":"assembling_machine_1",
+		"assembling_machine_1": 0.5,
+		"assembling_machine_2": 0.75,
+		"assembling_machine_3": 1.25
+	},
+	"oil_refinery":{
+		"default":"oil_refinery_1",
+		"oil_refinery_1": 1.0
+	},
+	"offshore_pump":{
+		"default":"offshore_pump_1",
+		"offshore_pump_1": 1.0
+	},
+	"filtration_plant":{
+		"default":"filtration_plant_1",
+		"filtration_plant_1": 1.0
+	},
+	"geenhouse":{
+		"default":"geenhouse_1",
+		"geenhouse_1": 1.0
+	},
+	"chemical_plant":{
+		"default": "chemical_plant_1",
+		"chemical_plant_1": 1.0,
+		"chemical_plant_2": 2.2
+	},
+	"crusher":{
+		"default":"crusher_1",
+		"crusher_1": 1.0
+	},
+	"electrolysis_plant":{
+		"default":"electrolysis_plant_1",
+		"electrolysis_plant_1": 1.0
+	},
+	"fuel_refinery":{
+		"default":"fuel_refinery_1",
+		"fuel_refinery_1": 1.0
+	},
+	"furnace": {
+		"default":"stone_furnace",
+		"stone_furnace": 1,
+		"steel_furnace": 2,
+		"electric_furnace": 2
+	},
+	"miner": {
+		"default":"burner_drill",
+		"burner_drill": 0.25,
+		"electric_drill": 0.5
+	},
+	"atmospheric_condenser": {
+		"default":"atmospheric_condenser_1",
+		"atmospheric_condenser_1": 1.5
+	}
+}

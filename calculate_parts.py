@@ -129,12 +129,12 @@ def Calculate_Required_Manufacturing(Component, Configuration, Components, Produ
 Component_File = "components.json"
 Production_File = "production.json"
 
-Target_Construction = "utility_tech_card"
-Amount_Per_Second = 1
+Target_Construction = "plastic_bar"
+Amount_Per_Second = 15
 
 Configuration = {
 
-    "assembling_machine": "assembling_machine_1",
+    "assembling_machine": "assembling_machine_2",
     "furnace": "stone_furnace",
     "miner": "electric_drill",
     "oil_refinery": "oil_refinery_1",
@@ -142,7 +142,7 @@ Configuration = {
     "filtration_plant": "filtration_plant_1",
     "crusher": "crusher_1",
     "chemical_plant": "chemical_plant_1",
-    "show_optional_recipes": False,
+    "show_optional_recipes": True,
 
     "preferred_recipe": {
     }
